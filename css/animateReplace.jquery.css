@@ -1,124 +1,12 @@
 @CHARSET "ISO-8859-1";
-/***
-* CSS3 FLIP CARDS
-* Markup for an element that a user can hover to reveal content on the back, like a card
-* Browser Support: Safari, Firefox, Chrome, IE8+, and Touch Devices; (IE9 and below will not have any flip effect but will just change on hover)
-***/
-/* line 9, ../sass/transform/_flip.scss */
-.flip-card {
-  display: block;
-  position: relative;
-  z-index: 1000;
-}
-/* line 15, ../sass/transform/_flip.scss */
-.flip-card .card-front,
-.flip-card .card-back {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 400ms;
-  -moz-transition: -moz-transform 400ms;
-  -o-transition: -o-transform 400ms;
-  transition: transform 400ms;
-  display: inline-block;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-/* line 24, ../sass/transform/_flip.scss */
-.flip-card .card-front {
-  -webkit-transform: perspective(900) rotateY(0deg);
-  -moz-transform: perspective(900) rotateY(0deg);
-  -ms-transform: perspective(900) rotateY(0deg);
-  -o-transform: perspective(900) rotateY(0deg);
-  transform: perspective(900) rotateY(0deg);
-  z-index: 900;
-}
-/* line 29, ../sass/transform/_flip.scss */
-.flip-card .card-back {
-  -webkit-transform: perspective(900) rotateY(-180deg);
-  -moz-transform: perspective(900) rotateY(-180deg);
-  -ms-transform: perspective(900) rotateY(-180deg);
-  -o-transform: perspective(900) rotateY(-180deg);
-  transform: perspective(900) rotateY(-180deg);
-  /*
-  	@include create-transform(false, 0.7, 0.7, 0.7, 0, -180deg);	//	, 0, true, 289px, 0, 0, 0, 0, 0, 289px
-  */
-  z-index: 800;
-}
-/* line 38, ../sass/transform/_flip.scss */
-.flip-card:hover .card-front, .flip-card.flip-card-now .card-front {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-/* line 42, ../sass/transform/_flip.scss */
-.flip-card:hover .card-back, .flip-card.flip-card-now .card-back {
-  z-index: 950;
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-  -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-}
-
-/*** Just for show... ***/
-/* line 55, ../sass/transform/_flip.scss */
-.flip-card {
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
-  color: #fff;
-  cursor: pointer;
-  float: left;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  min-width: 100px;
-  max-width: 400px;
-  /*.card-back,*/
-}
-/* line 67, ../sass/transform/_flip.scss */
-.flip-card .card-front,
-.flip-card .card-back {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 71, ../sass/transform/_flip.scss */
-.flip-card .card-front {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 75, ../sass/transform/_flip.scss */
-.flip-card .card-shadow {
-  -webkit-box-shadow: 0 0 80px rgba(0, 0, 0, 0.8) inset;
-  -moz-box-shadow: 0 0 80px rgba(0, 0, 0, 0.8) inset;
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8) inset;
-  /*background-color: #499bea; // Old browsers*/
-}
-
-/* line 8, ../sass/animateReplace.jquery.scss */
+/* line 6, ../sass/animateReplace.jquery.scss */
 .appear-animation {
   display: inline-block;
   position: relative;
   z-index: 1000;
   overflow: shown;
 }
-/* line 14, ../sass/animateReplace.jquery.scss */
+/* line 12, ../sass/animateReplace.jquery.scss */
 .appear-animation .coming-in, .appear-animation .going-out {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -140,7 +28,7 @@
   top: 0;
   left: 0;
 }
-/* line 27, ../sass/animateReplace.jquery.scss */
+/* line 25, ../sass/animateReplace.jquery.scss */
 .appear-animation .coming-in {
   -webkit-transform: perspective(900) rotateY(0deg);
   -moz-transform: perspective(900) rotateY(0deg);
@@ -167,7 +55,7 @@
   z-index: 900;
   /*background-color: lightyellow;*/
 }
-/* line 37, ../sass/animateReplace.jquery.scss */
+/* line 35, ../sass/animateReplace.jquery.scss */
 .appear-animation .going-out {
   -webkit-transform: perspective(900) rotateY(180deg);
   -moz-transform: perspective(900) rotateY(180deg);
@@ -194,7 +82,7 @@
   z-index: 800;
   /*background-color: lavender;*/
 }
-/* line 48, ../sass/animateReplace.jquery.scss */
+/* line 46, ../sass/animateReplace.jquery.scss */
 .appear-animation.animated .coming-in {
   -webkit-transform: perspective(900) rotateY(180deg);
   -moz-transform: perspective(900) rotateY(180deg);
@@ -215,7 +103,7 @@
   -moz-box-shadow: #cccccc -50px -10px 40px;
   box-shadow: #cccccc -50px -10px 40px;
 }
-/* line 54, ../sass/animateReplace.jquery.scss */
+/* line 52, ../sass/animateReplace.jquery.scss */
 .appear-animation.animated .going-out {
   -webkit-transform: perspective(900) rotateY(0deg);
   -moz-transform: perspective(900) rotateY(0deg);
