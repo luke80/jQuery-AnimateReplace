@@ -120,20 +120,17 @@ Animate and Replace (animateReplace for short)
 					
 					//	In order for the CSS transitions to work the parent of the element needs some specific classes.
 					//	There are 2 basic options here;
-					//		1) "flip" from the parent.
+					//		1) "flip" from the parent. (untested)
 					//		2) transparently add a parent to the DOM, inheriting the dimensions of the element
 					//	Once that is known, then we will add the new element and apply the CSS transition.
-					//	Based on the CSS transition timing, the now hidden content will be removed and stored in the $.data of the parent.
-					//	
-					//	If no element is provided to "flip" to, then there must be an element stored.
-					//	The first (index:0) element stored will be used as the new "flip" content.
+					//	Based on the CSS transition timing, the now hidden content will be removed and stored in the $.data of the parent under the "flipped-out" key.
 					
 					methods['debug']( _this, "Flipping element!", "flip");
 					data = methods['put-data']( _this, {flipping: true} );
 					methods['debug']( _this, data, "flip");
 					//	This part allows for either option listed above (1 or 2)
 					if( !data.options['anchor'] || data.options['anchor'].toLowerCase() !== "parent") {
-						//	1
+						//	2
 						var anchor = $('<div style="display:inline-block;margin:0;padding:0;border:0"></div>').attr("id", "arparent-id"+$this.attr("id"));
 						anchor.css("height",$this.height());
 						anchor.css("width",$this.width());
@@ -144,12 +141,12 @@ Animate and Replace (animateReplace for short)
 						methods['debug']( _this, $this, "flip");
 						methods['debug']( _this, anchor, "flip");
 						//$this = anchor;
-						methods['debug']( _this, "option 1", "flip");
+						methods['debug']( _this, "option 2", "flip");
 					} else {
-						//	2
+						//	1
 						var anchor = $this.parent();
 						//$this = anchor;
-						methods['debug']( _this, "option 2", "flip");
+						methods['debug']( _this, "option 1", "flip");
 					}
 					//	Now verify that flipTo is valid
 					if( flipTo instanceof HTMLElement )	flipTo = $(flipTo);
