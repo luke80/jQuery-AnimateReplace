@@ -1,0 +1,127 @@
+@CHARSET "ISO-8859-1";
+/* line 6, ../sass/animateReplace.jquery.scss */
+.appear-animation {
+  display: inline-block;
+  position: relative;
+  z-index: 1000;
+  overflow: shown;
+}
+/* line 12, ../sass/animateReplace.jquery.scss */
+.appear-animation .coming-in, .appear-animation .going-out {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform, box-shadow;
+  -moz-transition: -moz-transform, box-shadow;
+  -o-transition: -o-transform, box-shadow;
+  transition: transform, box-shadow;
+  -webkit-transition-duration: 0.75s, 0.5s;
+  -moz-transition-duration: 0.75s, 0.5s;
+  -o-transition-duration: 0.75s, 0.5s;
+  transition-duration: 0.75s, 0.5s;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 25, ../sass/animateReplace.jquery.scss */
+.appear-animation .coming-in {
+  -webkit-transform: perspective(900) rotateY(0deg);
+  -moz-transform: perspective(900) rotateY(0deg);
+  -ms-transform: perspective(900) rotateY(0deg);
+  -o-transform: perspective(900) rotateY(0deg);
+  transform: perspective(900) rotateY(0deg);
+  -webkit-transform: perspective(900) rotateY(0deg);
+  -moz-transform: perspective(900) rotateY(0deg);
+  -ms-transform: perspective(900) rotateY(0deg);
+  -o-transform: perspective(900) rotateY(0deg);
+  transform: perspective(900) rotateY(0deg);
+  -webkit-transform-origin: left 50%;
+  -moz-transform-origin: left 50%;
+  -ms-transform-origin: left 50%;
+  -o-transform-origin: left 50%;
+  transform-origin: left 50%;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.645, -0.6, 0, 1);
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.645, -0.6, 0, 1);
+  -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.645, -0.6, 0, 1);
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(0.645, -0.6, 0, 1);
+  -webkit-box-shadow: #cccccc 0 0 10px;
+  -moz-box-shadow: #cccccc 0 0 10px;
+  box-shadow: #cccccc 0 0 10px;
+  z-index: 900;
+  /*background-color: lightyellow;*/
+}
+/* line 35, ../sass/animateReplace.jquery.scss */
+.appear-animation .going-out {
+  -webkit-transform: perspective(900) rotateY(180deg);
+  -moz-transform: perspective(900) rotateY(180deg);
+  -ms-transform: perspective(900) rotateY(180deg);
+  -o-transform: perspective(900) rotateY(180deg);
+  transform: perspective(900) rotateY(180deg);
+  -webkit-transform: perspective(900) rotateY(180deg);
+  -moz-transform: perspective(900) rotateY(180deg);
+  -ms-transform: perspective(900) rotateY(180deg);
+  -o-transform: perspective(900) rotateY(180deg);
+  transform: perspective(900) rotateY(180deg);
+  -webkit-transform-origin: left 50%;
+  -moz-transform-origin: left 50%;
+  -ms-transform-origin: left 50%;
+  -o-transform-origin: left 50%;
+  transform-origin: left 50%;
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(1, 0, 0.255, 1.6);
+  -moz-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(1, 0, 0.255, 1.6);
+  -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(1, 0, 0.255, 1.6);
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55), cubic-bezier(1, 0, 0.255, 1.6);
+  -webkit-box-shadow: #cccccc -50px -10px 40px;
+  -moz-box-shadow: #cccccc -50px -10px 40px;
+  box-shadow: #cccccc -50px -10px 40px;
+  z-index: 800;
+  /*background-color: lavender;*/
+}
+/* line 46, ../sass/animateReplace.jquery.scss */
+.appear-animation.animated .coming-in {
+  -webkit-transform: perspective(900) rotateY(180deg);
+  -moz-transform: perspective(900) rotateY(180deg);
+  -ms-transform: perspective(900) rotateY(180deg);
+  -o-transform: perspective(900) rotateY(180deg);
+  transform: perspective(900) rotateY(180deg);
+  -webkit-transform: perspective(900) rotateY(180deg);
+  -moz-transform: perspective(900) rotateY(180deg);
+  -ms-transform: perspective(900) rotateY(180deg);
+  -o-transform: perspective(900) rotateY(180deg);
+  transform: perspective(900) rotateY(180deg);
+  -webkit-transform-origin: left 50%;
+  -moz-transform-origin: left 50%;
+  -ms-transform-origin: left 50%;
+  -o-transform-origin: left 50%;
+  transform-origin: left 50%;
+  -webkit-box-shadow: #cccccc -50px -10px 40px;
+  -moz-box-shadow: #cccccc -50px -10px 40px;
+  box-shadow: #cccccc -50px -10px 40px;
+}
+/* line 52, ../sass/animateReplace.jquery.scss */
+.appear-animation.animated .going-out {
+  -webkit-transform: perspective(900) rotateY(0deg);
+  -moz-transform: perspective(900) rotateY(0deg);
+  -ms-transform: perspective(900) rotateY(0deg);
+  -o-transform: perspective(900) rotateY(0deg);
+  transform: perspective(900) rotateY(0deg);
+  -webkit-transform: perspective(900) rotateY(0deg);
+  -moz-transform: perspective(900) rotateY(0deg);
+  -ms-transform: perspective(900) rotateY(0deg);
+  -o-transform: perspective(900) rotateY(0deg);
+  transform: perspective(900) rotateY(0deg);
+  -webkit-transform-origin: left 50%;
+  -moz-transform-origin: left 50%;
+  -ms-transform-origin: left 50%;
+  -o-transform-origin: left 50%;
+  transform-origin: left 50%;
+  -webkit-box-shadow: #cccccc 0 0 10px;
+  -moz-box-shadow: #cccccc 0 0 10px;
+  box-shadow: #cccccc 0 0 10px;
+  z-index: 950;
+}
